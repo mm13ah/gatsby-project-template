@@ -1,0 +1,32 @@
+{
+  "globals": {
+    "__PATH_PREFIX__": true,
+    "cy": true
+  },
+  "extends": [
+    "react-app",
+    "airbnb-base",
+    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+  "env": {
+    "jest": true
+  },
+  "ignorePatterns": ["gatsby-config.ts"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "import/extensions": "off",
+    "import/no-extraneous-dependencies": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.stories.tsx"],
+      "rules": {
+        "import/no-default-export": "off"
+      }
+    }
+  ]
+}
